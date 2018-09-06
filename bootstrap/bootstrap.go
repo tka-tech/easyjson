@@ -15,9 +15,9 @@ import (
 	"strings"
 )
 
-const genPackage = "github.com/bringhub/easyjson/gen"
-const pkgWriter = "github.com/bringhub/easyjson/jwriter"
-const pkgLexer = "github.com/bringhub/easyjson/jlexer"
+const genPackage = "github.com/tka-tech/easyjson/gen"
+const pkgWriter = "github.com/tka-tech/easyjson/jwriter"
+const pkgLexer = "github.com/tka-tech/easyjson/jlexer"
 
 type Generator struct {
 	PkgPath, PkgName string

@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/bringhub/easyjson"
+	"github.com/tka-tech/easyjson"
 )
 
 // TODO: changed this
