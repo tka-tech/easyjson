@@ -12,7 +12,7 @@ import (
 	// Reference the gen package to be friendly to vendoring tools,
 	// as it is an indirect dependency.
 	// (The temporary bootstrapping code uses it.)
-	_ "github.com/tka-tech/easyjson/gen"
+	// _ "github.com/tka-tech/easyjson/gen"
 	"github.com/tka-tech/easyjson/parser"
 )
 
