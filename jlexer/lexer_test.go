@@ -25,9 +25,9 @@ func TestString(t *testing.T) {
 
 		{toParse: `"test"junk`, want: "test"},
 
-		{toParse: `5`, wantError: true},        // not a string
-		{toParse: `"\x"`, wantError: true},     // invalid escape
-		{toParse: `"\ud800"`, want: "�"},      // invalid utf-8 char; return replacement char
+		{toParse: `5`, wantError: true},    // not a string
+		{toParse: `"\x"`, wantError: true}, // invalid escape
+		{toParse: `"\ud800"`, want: "�"},   // invalid utf-8 char; return replacement char
 	} {
 		l := Lexer{Data: []byte(test.toParse)}
 
@@ -262,12 +262,12 @@ func TestJsonNumber(t *testing.T) {
 		{toParse: `10`, want: json.Number("10"), wantValue: int64(10)},
 		{toParse: `0`, want: json.Number("0"), wantValue: int64(0)},
 		{toParse: `0.12`, want: json.Number("0.12"), wantValue: 0.12},
-		{toParse: `25E-4`, want: json.Number("25E-4"), wantValue: 25E-4},
+		{toParse: `25E-4`, want: json.Number("25E-4"), wantValue: 25e-4},
 
 		{toParse: `"10"`, want: json.Number("10"), wantValue: int64(10)},
 		{toParse: `"0"`, want: json.Number("0"), wantValue: int64(0)},
 		{toParse: `"0.12"`, want: json.Number("0.12"), wantValue: 0.12},
-		{toParse: `"25E-4"`, want: json.Number("25E-4"), wantValue: 25E-4},
+		{toParse: `"25E-4"`, want: json.Number("25E-4"), wantValue: 25e-4},
 
 		{toParse: `"a""`, wantValueError: true},
 

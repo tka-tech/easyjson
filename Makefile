@@ -15,7 +15,7 @@ clean:
 	rm -rf tests/*_easyjson.go
 
 build:
-	go build -i -o .root/bin/easyjson $(PKG)/easyjson
+	go build -o .root/bin/easyjson $(PKG)/easyjson
 
 generate: root build
 	.root/bin/easyjson -stubs \
